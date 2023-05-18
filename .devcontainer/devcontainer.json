@@ -10,8 +10,8 @@
 	],
 	"portsAttributes": {
 		"5003": {
-		  "onAutoForward": "notify",
-		  "visibility": "public"
+			"onAutoForward": "notify",
+			"visibility": "public",
 		}
 	},
 	// Use 'remoteEnv' to override the server url in the openapi.yaml
