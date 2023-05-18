@@ -3,7 +3,7 @@
 	"name": "ChatGPT Quickstart Plugins",
 	// Use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"context": "..",
-	"dockerFile": "Dockerfile",	
+	"dockerFile": "../Dockerfile",	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [
 		5003
