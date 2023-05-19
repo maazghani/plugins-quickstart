@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "ChatGPT Quickstart Plugins",
+	// Use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"context": "..",
+	"dockerFile": "../Dockerfile",	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [
+		5003
+	],
+	"portsAttributes": {
+		"5003": {
+			"onAutoForward": "notify",
+			"visibility": "public",
+		}
+	},
+	// Use 'remoteEnv' to override the server url in the openapi.yaml
+	"remoteEnv": {
+		"SERVER_URL": "https://${CODESPACE_NAME}-5003.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}"
+	  },
+	"customizations": {
+		"codespaces": {
+			"openFiles": [
+				".well-known/ai-plugin.json",
+				"openapi.yaml"
+			]
+		}
+	}
+}
